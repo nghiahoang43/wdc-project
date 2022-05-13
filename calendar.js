@@ -32,7 +32,7 @@ const chooseDate = (id) => {
 
 // CHECK LEAP YEAR
 const isLeapYear = (year) => {
-  return (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) || (year % 100 === 0 && year % 400 === 0)
+  return (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) || (year % 100 === 0 && year % 400 === 0);
 };
 
 const getFebDays = (year) => {
@@ -90,17 +90,17 @@ month_names.forEach((e, index) => {
     generateCalendar(curr_month.value, curr_year.value);
   };
   month_list.appendChild(month);
-})
+});
 
 document.querySelector('#prev-year').onclick = () => {
   --curr_year.value;
   generateCalendar(curr_month.value, curr_year.value);
-}
+};
 
 document.querySelector('#next-year').onclick = () => {
   ++curr_year.value;
   generateCalendar(curr_month.value, curr_year.value);
-}
+};
 
 let currDate = new Date();
 

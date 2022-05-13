@@ -52,7 +52,6 @@ body{
   width:42px; 
   height:42px; 
   display:inline-block; 
-  float:left; 
   overflow:hidden; 
   line-height:40px;
 }
@@ -158,7 +157,6 @@ div[data-title]:hover:after {
   z-index: -1;
 }
 
-.button-19:main,
 .button-19:focus {
   user-select: auto;
 }

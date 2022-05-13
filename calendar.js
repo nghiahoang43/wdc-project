@@ -6,7 +6,7 @@ var dateChosen = [];
 document.querySelector('.dark-mode-switch').onclick = () => {
   document.querySelector('body').classList.toggle('dark');
   document.querySelector('body').classList.toggle('light');
-}
+};
 
 const chooseDate = (id) => {
   let inArray = false;
@@ -14,40 +14,40 @@ const chooseDate = (id) => {
 
     for (let index = 0; index < dateChosen.length; index++) {
       if (dateChosen[index] == id) {
-        dateChosen.splice(index, 1)
-        inArray = true
+        dateChosen.splice(index, 1);
+        inArray = true;
       }
     }
     if (!inArray) {
-      dateChosen.push(id)
+      dateChosen.push(id);
     }
   }
   else {
-    dateChosen = [id]
+    dateChosen = [id];
   }
 
-  let date = document.getElementById(id)
-  date.classList.toggle('chosen-day')
+  let date = document.getElementById(id);
+  date.classList.toggle('chosen-day');
 }
 
 // CHECK LEAP YEAR
 const isLeapYear = (year) => {
   return (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) || (year % 100 === 0 && year % 400 === 0)
-}
+};
 
 const getFebDays = (year) => {
-  return isLeapYear(year) ? 29 : 28
-}
+  return isLeapYear(year) ? 29 : 28;
+};
 
-var calendar = document.querySelector('.calendar')
+var calendar = document.querySelector('.calendar');
 
-const month_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+const month_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-let month_picker = document.querySelector('#month-picker')
+let month_picker = document.querySelector('#month-picker');
 
 month_picker.onclick = () => {
-  month_list.classList.add('show')
-}
+  month_list.classList.add('show');
+};
 
 const generateCalendar = (month, year) => {
   var calendar_days = document.querySelector('.calendar-days')

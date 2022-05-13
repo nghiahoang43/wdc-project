@@ -11,7 +11,7 @@ document.querySelector('.dark-mode-switch').onclick = () => {
 const chooseDate = (id) => {
   let inArray = false;
   if (document.querySelector('body').classList[0] == 'dark') {
-    
+
   for (let index = 0; index < dateChosen.length; index++) {
     if (dateChosen[index] == id)
     {
